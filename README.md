@@ -3,8 +3,8 @@
 	- [packer.nvim](#packernvim)
 	- [telescope.nvim](#telescopenvim)
 		- [ripgrep](#ripgrep)
-	- [Alacritty](#alacritty)
-	- [i3](#i3)
+- [Alacritty](#alacritty)
+- [i3](#i3)
 - [TODO](#todo)
 
 # Neovim
@@ -18,17 +18,15 @@
 
 _Plugin manager_
 
-Repo: [https://github.com/wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
-
-	Use `:PackerSync` to sync packages
+* Repo: [https://github.com/wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
+* Use `:PackerSync` to sync packages
 	
 ## telescope.nvim
 
 _Fuzzy finder_
 
-Repo: [https://github.com/nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-
-	Use `:checkhealth telescope` to check for missing dependencies
+* Repo: [https://github.com/nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+* Use `:checkhealth telescope` to check for missing dependencies
 
 ### ripgrep
 
@@ -41,16 +39,17 @@ _Search tool_
 
 
 
-## Alacritty
+# Alacritty
 
 - [ ] Add list of dependencies
 
-## i3
+# i3
 
 - [ ] Add list of dependencies
 
 # TODO
 - [ ] Set default editor by exporting EDITOR variable from `.zshrc` (or similar file)
-  ```
+  
+  ```bash
 	export EDITOR='nvim'
   ```
