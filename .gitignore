@@ -1,0 +1,20 @@
+# Root (everything)
+/*
+
+# This file
+!.gitignore
+
+# Directory: .config
+!/.config/
+/.config/*
+
+# -------- Neovim --------
+# Directory: .config/nvim
+!/.config/nvim/
+/.config/nvim/*
+!/.config/nvim/*.lua
+
+!/.config/nvim/lua
+/.config/nvim/lua/*
+!/.config/nvim/lua/*.lua
+# ------------------------
