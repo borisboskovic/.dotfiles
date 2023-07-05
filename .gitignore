@@ -17,7 +17,18 @@
 /.config/nvim/*
 !/.config/nvim/*.lua
 
-!/.config/nvim/lua
+# Directory: .config/nvim/lua
+!/.config/nvim/lua/
 /.config/nvim/lua/*
 !/.config/nvim/lua/*.lua
+
+# Directory: .config/nvim/after
+!/.config/nvim/after/
+/.config/nvim/after/*
+!/.config/nvim/after/*.lua
+
+# Directory: .config/nvim/after/plugin
+!/.config/nvim/after/plugin
+/.config/nvim/after/plugin/*
+!/.config/nvim/after/plugin/*.lua
 # ------------------------
