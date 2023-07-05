@@ -4,6 +4,9 @@
 # This file
 !.gitignore
 
+# Readme file
+!README.md
+
 # Directory: .config
 !/.config/
 /.config/*
