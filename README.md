@@ -5,6 +5,7 @@
 		- [ripgrep](#ripgrep)
 	- [Alacritty](#alacritty)
 	- [i3](#i3)
+- [TODO](#todo)
 
 # Neovim
 
@@ -47,3 +48,9 @@ _Search tool_
 ## i3
 
 - [ ] Add list of dependencies
+
+# TODO
+- [ ] Set default editor by exporting EDITOR variable from `.zshrc` (or similar file)
+  ```
+	export EDITOR='nvim'
+  ```
