@@ -59,7 +59,7 @@ _Search tool_
 - [ ] Add list of dependencies
 
 # TODO
-- [ ] Set default editor by exporting EDITOR variable from `.zshrc` (or similar file)
+- [ ] Set default editor by exporting EDITOR variable from `.zshrc` (or `zsh_profile`)
   
   ```bash
 	export EDITOR='nvim'
