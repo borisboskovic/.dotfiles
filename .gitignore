@@ -7,6 +7,9 @@
 # Readme file
 !README.md
 
+# Custom scripts
+!/scripts/
+
 # Directory: .config
 !/.config/
 /.config/*
@@ -26,4 +29,9 @@
 
 # -------- i3 --------
 !/.config/i3/
+# --------------------
+
+# -------- Polybar --------
+!/.config/polybar/
+# -------------------------
 
