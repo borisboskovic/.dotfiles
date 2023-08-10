@@ -36,3 +36,7 @@
 # -------- Alacritty --------
 # Directory: .config/alacritty
 !/.config/alacritty/
+
+# -------- i3 --------
+!/.config/i3/
+
