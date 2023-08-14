@@ -202,6 +202,9 @@ default_border pixel
 # exec --no-startup-id /usr/bin/pipewire-pulse
 # exec --no-startup-id /usr/bin/pipewire-media-session
 
+# Picom
+exec --no-startup-id picom --daemon
+
 # Nitrogen wallpaper
 exec --no-startup-id nitrogen --restore
 
