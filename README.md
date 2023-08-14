@@ -7,6 +7,12 @@
 	- [nvim-treesitter](#nvim-treesitter)
 - [Alacritty](#alacritty)
 - [i3](#i3)
+	- [Rofi](#rofi)
+		- [Papirus icon theme](#papirus-icon-theme)
+		- [Rofi emoji](#rofi-emoji)
+			- [Noto Fonts Emoji](#noto-fonts-emoji)
+			- [xclip](#xclip)
+			- [xdotool](#xdotool)
 - [TODO](#todo)
 
 # Neovim
@@ -56,7 +62,68 @@ _Search tool_
 
 # i3
 
-- [ ] Add list of dependencies
+## Rofi
+
+_A window switcher, Application launcher and dmenu replacement._
+
+* Repo: https://github.com/davatorium/rofi
+
+	```bash
+		sudo pacman -S rofi
+	```
+
+### Papirus icon theme
+
+_Icon theme, used by Rofi_
+
+* Repo: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+
+	```bash
+		sudo pacman -S papirus-icon-theme
+	```
+
+### Rofi emoji
+
+_Emoji picker for Rofi_
+
+* Repo: https://github.com/Mange/rofi-emoji#usage
+
+	```bash
+		sudo pacman -S rofi-emoji
+	```
+
+#### Noto Fonts Emoji
+
+_Font to be used with rofi-emoji_
+
+* Package: https://archlinux.org/packages/extra/any/noto-fonts-emoji/
+
+	```bash
+		sudo pacman -S noto-fonts-emoji
+	```
+
+#### xclip
+
+_Command line clipboard utility for X11 systems_
+
+* Repo: https://github.com/astrand/xclip
+* Possibly also used by **Neovim**
+
+	```bash
+		sudo pacman -S xclip
+	```
+
+#### xdotool
+
+_x11 automation tool. (Rofi uses it for simulating keyboard input)_
+
+* Repo: https://github.com/jordansissel/xdotool
+
+	```bash
+		sudo pacman -S xdotool
+	```
+
+---
 
 # TODO
 - [ ] Set default editor by exporting EDITOR variable from `.zshrc` (or `zsh_profile`)

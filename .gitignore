@@ -32,10 +32,17 @@
 # ---------------------------
 
 # -------- i3 --------
+# Directory: .config/i3
 !/.config/i3/
 # --------------------
 
 # -------- Polybar --------
+# Directory: .config/polybar
 !/.config/polybar/
 # -------------------------
+
+# -------- Rofi --------
+# Directory: .config/rofi
+!/.config/rofi/
+# ----------------------
 

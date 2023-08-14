@@ -1,0 +1,7 @@
+configuration {
+	show-icons: true;
+	icon-theme: "Papirus";
+	modes: [drun, window, emoji];
+}
+@theme "~/.config/rofi/themes/themes/squared-nord.rasi"
+
