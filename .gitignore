@@ -14,6 +14,10 @@
 !/.config/
 /.config/*
 
+# -------- Zsh --------
+!.zsh_profile
+# ---------------------
+
 # -------- Neovim --------
 # Directory: .config/nvim
 !/.config/nvim/
