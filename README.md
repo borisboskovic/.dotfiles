@@ -148,3 +148,5 @@ _X11 automation tool. (Rofi uses it for simulating keyboard input)_
 * i3 scratchpads
 * Neovim (watch Prime)
 * VSCodium, add WakaTime
+* Use and describe `:checkhealth` in Nvim
+* 
