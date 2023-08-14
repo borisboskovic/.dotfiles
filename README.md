@@ -147,4 +147,4 @@ _X11 automation tool. (Rofi uses it for simulating keyboard input)_
 * powerlevel10k and oh-my-zsh
 * i3 scratchpads
 * Neovim (watch Prime)
-* 
+* VSCodium, add WakaTime
