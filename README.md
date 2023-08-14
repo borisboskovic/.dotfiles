@@ -6,8 +6,10 @@
 	- [Color scheme](#color-scheme)
 	- [nvim-treesitter](#nvim-treesitter)
 - [Alacritty](#alacritty)
+	- [Color scheme](#color-scheme-1)
 - [i3](#i3)
 	- [Rofi](#rofi)
+		- [Color scheme](#color-scheme-2)
 		- [Papirus icon theme](#papirus-icon-theme)
 		- [Rofi emoji](#rofi-emoji)
 			- [Noto Fonts Emoji](#noto-fonts-emoji)
@@ -58,7 +60,11 @@ _Search tool_
 
 # Alacritty
 
-- [ ] Add list of dependencies
+## Color scheme
+
+* Using Git submodule
+* Repo: https://github.com/alacritty/alacritty-theme
+
 
 # i3
 
@@ -69,8 +75,13 @@ _A window switcher, Application launcher and dmenu replacement._
 * Repo: https://github.com/davatorium/rofi
 
 	```bash
-		sudo pacman -S rofi
+	sudo pacman -S rofi
 	```
+
+### Color scheme
+
+* Using Git submodule
+* Repo: https://github.com/newmanls/rofi-themes-collection
 
 ### Papirus icon theme
 
@@ -79,7 +90,7 @@ _Icon theme, used by Rofi_
 * Repo: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 
 	```bash
-		sudo pacman -S papirus-icon-theme
+	sudo pacman -S papirus-icon-theme
 	```
 
 ### Rofi emoji
@@ -89,7 +100,7 @@ _Emoji picker for Rofi_
 * Repo: https://github.com/Mange/rofi-emoji#usage
 
 	```bash
-		sudo pacman -S rofi-emoji
+	sudo pacman -S rofi-emoji
 	```
 
 #### Noto Fonts Emoji
@@ -99,7 +110,7 @@ _Font to be used with rofi-emoji_
 * Package: https://archlinux.org/packages/extra/any/noto-fonts-emoji/
 
 	```bash
-		sudo pacman -S noto-fonts-emoji
+	sudo pacman -S noto-fonts-emoji
 	```
 
 #### xclip
@@ -110,7 +121,7 @@ _Command line clipboard utility for X11 systems_
 * Possibly also used by **Neovim**
 
 	```bash
-		sudo pacman -S xclip
+	sudo pacman -S xclip
 	```
 
 #### xdotool
@@ -120,14 +131,12 @@ _x11 automation tool. (Rofi uses it for simulating keyboard input)_
 * Repo: https://github.com/jordansissel/xdotool
 
 	```bash
-		sudo pacman -S xdotool
+	sudo pacman -S xdotool
 	```
 
 ---
 
 # TODO
-- [ ] Set default editor by exporting EDITOR variable from `.zshrc` (or `zsh_profile`)
-  
-  ```bash
-	export EDITOR='nvim'
-  ```
+
+* Set up commit signing
+* 
