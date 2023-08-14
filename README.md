@@ -126,7 +126,7 @@ _Command line clipboard utility for X11 systems_
 
 #### xdotool
 
-_x11 automation tool. (Rofi uses it for simulating keyboard input)_
+_X11 automation tool. (Rofi uses it for simulating keyboard input)_
 
 * Repo: https://github.com/jordansissel/xdotool
 
@@ -139,4 +139,12 @@ _x11 automation tool. (Rofi uses it for simulating keyboard input)_
 # TODO
 
 * Set up commit signing
+* Configure PolyBar
+* Configure Picom
+* Fix Polybar and i3 behavior with multiple monitors
+* Integrate volumeicon with polybar
+* Integrate i3 resize with polybar
+* powerlevel10k and oh-my-zsh
+* i3 scratchpads
+* Neovim (watch Prime)
 * 
