@@ -4,5 +4,3 @@ local function SetColorScheme(color)
 end
 
 SetColorScheme()
-
-
