@@ -10,6 +10,8 @@ return require('packer').startup(function(use)
 	-- WakaTime plugin
 	use 'wakatime/vim-wakatime'
 
+	use 'nvim-lua/plenary.nvim'
+
 	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.2',
@@ -23,4 +25,6 @@ return require('packer').startup(function(use)
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
+
+	use("theprimeagen/harpoon")
 end)
