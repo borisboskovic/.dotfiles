@@ -5,6 +5,10 @@
 		- [ripgrep](#ripgrep)
 	- [Color scheme](#color-scheme)
 	- [nvim-treesitter](#nvim-treesitter)
+		- [tree-sitter](#tree-sitter)
+		- [fd](#fd)
+	- [lsp-zero.nvim](#lsp-zeronvim)
+		- [lspkind](#lspkind)
 - [Alacritty](#alacritty)
 	- [Color scheme](#color-scheme-1)
 - [i3](#i3)
@@ -24,13 +28,18 @@
 - telescope.nvim
   - ripgrep
   - nvim.treesitter
+    - tree-sitter
+    - fd
+- lsp-zero.nvim
+  - onsails/lspkind-nvim
+    - nerd font
  
 ## packer.nvim
 
 _Plugin manager_
 
 * Repo: [https://github.com/wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
-* Use `:PackerSync` to sync packages
+* Installed with `Packer` (or other plugin manager)
 	
 ## telescope.nvim
 
@@ -49,12 +58,37 @@ _Search tool_
 ## Color scheme
 
 * Repo: [https://github.com/rose-pine/neovim](https://github.com/rose-pine/neovim)
-* Use `:PackerSync` to sync packages
+* Installed with `Packer` (or other plugin manager)
 
 ## nvim-treesitter
 
 * Repo: [https://github.com/nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-* Use `:PackerSync` to sync packages
+* Installed with `Packer` (or other plugin manager)
+
+### tree-sitter
+
+* Repo: [https://github.com/tree-sitter/tree-sitter](https://github.com/tree-sitter/tree-sitter)
+* Can be installed with `cargo install tree-sitter-cli` or `npm install tree-sitter-cli`
+* Use `:TSInstallInfo` to show installed / available languages
+
+### fd
+
+* Repo [https://github.com/sharkdp/fd](https://github.com/sharkdp/fd)
+* Can be installed using many popular package managers `apt, pacman, dnf...`
+
+## lsp-zero.nvim
+
+* **LSP** language support
+* Repo [https://github.com/VonHeikemen/lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
+* Installed with `Packer` (or other plugin manager)
+* Use `:Mason` to add/remove support for languages
+* Use `:LspInfo` to show **LSP** status
+
+### lspkind
+* Adds icons to **LSP** suggestions
+* Repo [https://github.com/onsails/lspkind.nvim](https://github.com/onsails/lspkind.nvim)
+* Needs some of the Nerd fonts to show icons (https://www.nerdfonts.com/font-downloads) (I used _FiraCode Nerd Font Mono_)
+
 
 ---
 
