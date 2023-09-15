@@ -1,23 +1,29 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true
+local options = {
+    number = true,
+    relativenumber = true,
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+    tabstop = 4,
+    softtabstop = 4,
+    shiftwidth = 4,
+    expandtab = true,
+    smartindent = true,
 
-vim.opt.wrap = false
+    wrap = false,
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
-vim.opt.undofile = true
+    swapfile = false,
+    backup = false,
+    undodir = os.getenv("HOME") .. "/.nvim/undodir",
+    undofile = true,
 
-vim.opt.hlsearch = true -- Search highlighting
-vim.opt.incsearch = true -- Incremental search
+    hlsearch = true, -- Search highlighting,
+    incsearch = true, -- Incremental search,
 
-vim.opt.scrolloff = 8 -- Number of lines beneath/above the cursor
-vim.opt.signcolumn = "yes"
+    scrolloff = 8, -- Number of lines beneath/above the cursor,
+    signcolumn = "yes",
 
-vim.opt.colorcolumn = "80"
+    colorcolumn = "80",
+}
+
+for option, value in pairs(options) do
+	vim.opt[option] = value
+end
