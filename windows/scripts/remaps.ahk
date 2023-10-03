@@ -20,3 +20,6 @@ Return
 <#7::go_to_desktop(7)
 <#8::go_to_desktop(8)
 <#9::go_to_desktop(9)
+<#+q::destroy_desktop()
+
+<#q::Send, <!{F4}

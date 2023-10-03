@@ -101,8 +101,14 @@ go_to_desktop(target_desktop_index)
 
         show_tooltip(target_desktop_index)
     }
-    else
+    else if (target_desktop_index = desktop_array.MaxIndex() + 1)
     {
-        ; TODO Create new desktop (but only current count + 1)
+        Send ^#d
+        show_tooltip(target_desktop_index)
     }
+}
+
+destroy_desktop()
+{
+    Send, #^{F4}
 }
