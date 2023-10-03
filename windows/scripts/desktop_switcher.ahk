@@ -1,24 +1,32 @@
+; For this script to work fluently it is recommended to disable some windows animations
+; Go to System Properties -> Advanced -> Performance Settings -> Animate windows when minimizing and maximizing
+
 #SingleInstance, Force
 SendMode Input
 SetWorkingDir, %A_ScriptDir%
+CoordMode, ToolTip, Screen
+
+RemoveToolTip:
+    ToolTip
+return
 
 get_session_id()
 {
     ProcessId := DllCall("GetCurrentProcessId", "UInt")
     DllCall("ProcessIdToSessionId", "UInt", ProcessId, "UInt*", SessionId)
-    return SessionId
+return SessionId
 }
 
 get_VirtualDesktopIDs()
 {
     RegRead, DesktopList, HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VirtualDesktops, VirtualDesktopIDs
-    return DesktopList
+return DesktopList
 }
 
 get_CurrentVirtualDesktop(session_id)
 {
     RegRead, CurrentDesktopId, HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\%session_id%\VirtualDesktops, CurrentVirtualDesktop
-    return CurrentDesktopId
+return CurrentDesktopId
 }
 
 get_desktop_array(current_dekstop)
@@ -36,13 +44,12 @@ get_desktop_array(current_dekstop)
         i++
     }
 
-    return desktop_array
+return desktop_array
 }
 
 get_desktop_index(desktop, desktop_array)
 {
     current_index := 0
-    ; ListVars
     for index, element in desktop_array
     {
         if (desktop = desktop_array[index])
@@ -50,7 +57,13 @@ get_desktop_index(desktop, desktop_array)
             current_index := index
         }
     }
-    return current_index
+return current_index
+}
+
+show_tooltip(num)
+{
+    ToolTip, %num%, (num - 1)* 32 + 8, 8
+    SetTimer, RemoveToolTip, -1000
 }
 
 go_to_desktop(target_desktop_index)
@@ -73,7 +86,7 @@ go_to_desktop(target_desktop_index)
             {
                 Send ^#{Left}
             }
-            return
+            show_tooltip(target_desktop_index)
         }
 
         ; Go right
@@ -83,8 +96,10 @@ go_to_desktop(target_desktop_index)
             {
                 Send ^#{Right}
             }
-            return
+            show_tooltip(target_desktop_index)
         }
+
+        show_tooltip(target_desktop_index)
     }
     else
     {
