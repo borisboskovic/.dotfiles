@@ -28,8 +28,8 @@
 # Directory: .config/nvim
 !/.config/nvim/
 #
-# Packer compiled
-/.config/nvim/plugin/packer_compiled.lua 
+# Lazy lock
+/.config/nvim/lazy-lock.json
 # ------------------------
 
 # -------- Alacritty --------
