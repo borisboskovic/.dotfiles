@@ -22,6 +22,7 @@ local options = {
     signcolumn = "yes",
 
     colorcolumn = "80",
+--    termguicolors = true,
 }
 
 for option, value in pairs(options) do
