@@ -43,6 +43,8 @@ require("lazy").setup({
         'nvim-lua/plenary.nvim'
     }},
 
+    {'mhartington/formatter.nvim'},
+
     {
         -- Highlight, edit, and navigate code
         'nvim-treesitter/nvim-treesitter',
