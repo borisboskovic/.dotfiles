@@ -1,3 +1,10 @@
+-- Borders on handlers. Alternatively you can add borders to separate handlers
+-- (textDocument/hover for example)
+for name in pairs(vim.lsp.handlers) do
+  vim.lsp.handlers[name] = vim.lsp.with(
+    vim.lsp.handlers[name], { border = "single" }
+  )
+end
 
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
@@ -37,11 +44,6 @@ local on_attach = function(_, bufnr)
   nmap('<leader>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, '[W]orkspace [L]ist Folders')
-
-  -- Create a command `:Format` local to the LSP buffer
-  vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-    vim.lsp.buf.format()
-  end, { desc = 'Format current buffer with LSP' })
 end
 
 -- Enable the following language servers
@@ -60,6 +62,7 @@ local servers = {
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   rust_analyzer = {},
+  tsserver = {},
 
   lua_ls = {
     Lua = {
@@ -149,13 +152,13 @@ cmp.setup {
   },
   formatting = {
     format = require('lspkind').cmp_format({
-      mode = 'symbol', -- show only symbol annotations
-      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+      mode = 'symbol',       -- show only symbol annotations
+      maxwidth = 50,         -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
       ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
 
       -- The function below will be called before any actual modifications from lspkind
       -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-      before = function (entry, vim_item)
+      before = function(entry, vim_item)
         return vim_item
       end
     })
