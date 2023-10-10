@@ -62,6 +62,12 @@ _Search tool_
 
 ## nvim-treesitter
 
+On Windows, for treesitter to work it was necessary to add following line to it's config:
+
+```lua
+	require 'nvim-treesitter.install'.compilers = { "clang" }
+```
+
 * Repo: [https://github.com/nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * Installed with `Packer` (or other plugin manager)
 
