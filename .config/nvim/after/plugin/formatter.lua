@@ -19,12 +19,14 @@ require('formatter').setup({
             function()
                 local formatters = require("formatter.util")
                     .get_available_formatters_for_ft(vim.bo.filetype)
-                local formatters_len = 0
-                for _ in pairs(formatters) do
-                    formatters_len = formatters_len + 1
+                if #formatters > 0 then
+                    return
                 end
-                if formatters_len == 0 then
-                    vim.lsp.buf.format()
+                local active_clients = vim.lsp.get_active_clients()
+                for _, client in pairs(active_clients) do
+                    if client.server_capabilities.documentFormattingProvider then
+                        return vim.lsp.buf.format()
+                    end
                 end
             end
         }
