@@ -12,7 +12,9 @@ require('formatter').setup({
     logging = false,
     filetype = {
         javascript = prettierd_formatter,
+        javascriptreact = prettierd_formatter,
         typescript = prettierd_formatter,
+        typescriptreact = prettierd_formatter,
 
         -- Format with LSP by default
         ["*"] = {
