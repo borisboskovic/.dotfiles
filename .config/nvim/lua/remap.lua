@@ -13,3 +13,26 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Paste from register 0
 vim.keymap.set("n", "<leader>pp", "\"0p")
+
+local log_helpers = {
+    javascript = { log_function = 'console.log("🎯 >> :", );', keystrokes = 'F:Pf,lp' },
+    typescript = { log_function = 'console.log("🎯 >> :", );', keystrokes = 'F:Pf,lp' },
+    javascriptreact = { log_function = 'console.log("🎯 >> :", );', keystrokes = 'F:Pf,lp' },
+    typescriptreact = { log_function = 'console.log("🎯 >> :", );', keystrokes = 'F:Pf,lp' },
+    rust = { log_function = 'println!("🎯 >> : {:?}", );', keystrokes = 'F:;Pf,lp' },
+    lua = { log_function = 'print("🎯 >> :", )', keystrokes = 'F:Pt)p' },
+}
+
+vim.keymap.set("n", "<leader>lg", function()
+    local helper = log_helpers[vim.bo.filetype]
+    if helper ~= nil then
+        vim.fn.feedkeys("yiwo" .. helper.log_function .. helper.keystrokes)
+    end
+end)
+
+vim.keymap.set("x", "<C-l>", function()
+    local helper = log_helpers[vim.bo.filetype]
+    if helper ~= nil then
+        vim.fn.feedkeys("yo" .. helper.log_function .. helper.keystrokes)
+    end
+end)
