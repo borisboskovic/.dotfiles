@@ -104,6 +104,12 @@ mason_lspconfig.setup_handlers {
   end
 }
 
+require('mason-tool-installer').setup({
+  ensure_installed = {
+    'prettierd',
+  }
+})
+
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'

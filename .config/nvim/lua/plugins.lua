@@ -84,7 +84,10 @@ require("lazy").setup({
             'folke/neodev.nvim',
 
             -- Json schemas
-            'b0o/SchemaStore.nvim'
+            'b0o/SchemaStore.nvim',
+
+            -- Used to install non LSP packages
+            'WhoIsSethDaniel/mason-tool-installer'
         },
     },
 
