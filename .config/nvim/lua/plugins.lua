@@ -114,4 +114,6 @@ require('lazy').setup({
     },
 
     { 'ckipp01/stylua-nvim' },
+
+    { 'kamykn/spelunker.vim' },
 })

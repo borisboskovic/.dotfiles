@@ -23,6 +23,9 @@ local options = {
 
     colorcolumn = "80",
 --    termguicolors = true,
+
+    spell = false,
+    spelllang = "en_us",
 }
 
 for option, value in pairs(options) do
