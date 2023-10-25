@@ -1,28 +1,28 @@
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
-local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system {
+    vim.fn.system({
         'git',
         'clone',
         '--filter=blob:none',
         'https://github.com/folke/lazy.nvim.git',
         '--branch=stable', -- latest stable release
         lazypath,
-    }
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
+require('lazy').setup({
     'wakatime/vim-wakatime',
 
     'mbbill/undotree',
 
     'tpope/vim-fugitive',
 
-    {'folke/tokyonight.nvim', priority = 1000},
+    { 'folke/tokyonight.nvim',     priority = 1000 },
 
     {
         -- Set lualine as statusline
@@ -32,18 +32,21 @@ require("lazy").setup({
             options = {
                 icons_enabled = true,
                 theme = 'auto',
-                component_separators = { left = '', right = ''},
-                section_separators = { left = '', right = ''},
+                component_separators = { left = '', right = '' },
+                section_separators = { left = '', right = '' },
             },
         },
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
     },
 
-    {'theprimeagen/harpoon', dependencies = {
-        'nvim-lua/plenary.nvim'
-    }},
+    {
+        'theprimeagen/harpoon',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+        }
+    },
 
-    {'mhartington/formatter.nvim'},
+    { 'mhartington/formatter.nvim' },
 
     {
         -- Highlight, edit, and navigate code
@@ -78,7 +81,7 @@ require("lazy").setup({
 
             -- Useful status updates for LSP
             -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-            { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+            { 'j-hui/fidget.nvim',       tag = 'legacy', opts = {} },
 
             -- Additional lua configuration, makes nvim stuff amazing!
             'folke/neodev.nvim',
@@ -87,7 +90,7 @@ require("lazy").setup({
             'b0o/SchemaStore.nvim',
 
             -- Used to install non LSP packages
-            'WhoIsSethDaniel/mason-tool-installer'
+            'WhoIsSethDaniel/mason-tool-installer',
         },
     },
 
@@ -106,7 +109,9 @@ require("lazy").setup({
             'rafamadriz/friendly-snippets',
 
             -- icons
-            'onsails/lspkind.nvim'
+            'onsails/lspkind.nvim',
         },
     },
+
+    { 'ckipp01/stylua-nvim' },
 })
