@@ -22,7 +22,7 @@ local options = {
     signcolumn = "yes",
 
     colorcolumn = "80",
---    termguicolors = true,
+    termguicolors = true,
 
     spell = false,
     spelllang = "en_us",

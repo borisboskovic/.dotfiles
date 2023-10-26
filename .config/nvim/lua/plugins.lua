@@ -43,7 +43,7 @@ require('lazy').setup({
         'theprimeagen/harpoon',
         dependencies = {
             'nvim-lua/plenary.nvim',
-        }
+        },
     },
 
     { 'mhartington/formatter.nvim' },
@@ -116,4 +116,11 @@ require('lazy').setup({
     { 'ckipp01/stylua-nvim' },
 
     { 'kamykn/spelunker.vim' },
+
+    {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = {
+            'nvim-tree/nvim-web-devicons',
+        }
+    },
 })
