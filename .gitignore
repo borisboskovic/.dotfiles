@@ -30,6 +30,7 @@
 #
 # Lazy lock
 /.config/nvim/lazy-lock.json
+/.config/nvim/spell/
 # ------------------------
 
 # -------- Alacritty --------
