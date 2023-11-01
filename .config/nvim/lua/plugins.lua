@@ -22,7 +22,13 @@ require('lazy').setup({
 
     'tpope/vim-fugitive',
 
-    { 'folke/tokyonight.nvim',     priority = 1000 },
+    {
+        'folke/tokyonight.nvim',
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme('tokyonight')
+        end,
+    },
 
     {
         -- Set lualine as statusline
