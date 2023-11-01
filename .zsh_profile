@@ -1,5 +1,5 @@
 alias sudo="sudo "
-alias vim="nvim"
+alias vim=~/bin/nvim.appimage
 alias gs="git status"
 alias gl="git log --all --decorate --oneline --graph"
 
