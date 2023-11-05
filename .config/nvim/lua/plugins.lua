@@ -131,4 +131,9 @@ require('lazy').setup({
     },
 
     { 'akinsho/toggleterm.nvim', version = '*', config = true },
+
+    {
+        'goolord/alpha-nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+    },
 })
