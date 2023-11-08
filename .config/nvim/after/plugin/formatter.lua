@@ -1,3 +1,8 @@
+local status_ok, formatter = pcall(require, 'formatter')
+if not status_ok then
+    return
+end
+
 local prettierd_formatter = function()
     return {
         exe = 'prettierd',
@@ -6,7 +11,7 @@ local prettierd_formatter = function()
     }
 end
 
-require('formatter').setup({
+formatter.setup({
     logging = false,
     filetype = {
         javascript = prettierd_formatter,
@@ -19,11 +24,11 @@ require('formatter').setup({
 
         -- For some reason Stylua currently ignores indentaton prefferences
         -- and always uses 4 spaces
-         lua = {
-             function()
+        lua = {
+            function()
                 return require('stylua-nvim').format_file()
-             end,
-         },
+            end,
+        },
 
         -- Format with LSP by default
         ['*'] = {
