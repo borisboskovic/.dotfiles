@@ -8,6 +8,7 @@ require('nvim-treesitter.configs').setup({
         'dockerfile',
         'gitcommit',
         'javascript',
+        'json',
         'lua',
         'prisma',
         'query',
