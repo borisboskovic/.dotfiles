@@ -16,8 +16,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    'wakatime/vim-wakatime',
-
     'mbbill/undotree',
 
     'tpope/vim-fugitive',
