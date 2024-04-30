@@ -18,7 +18,15 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     'mbbill/undotree',
 
-    'tpope/vim-fugitive',
+    {
+        'dstein64/vim-startuptime',
+        -- lazy-load on a command
+        cmd = 'StartupTime',
+        -- init is called during startup. Configuration for vim plugins typically should be set in an init function
+        init = function()
+            vim.g.startuptime_tries = 10
+        end,
+    },
 
     {
         'folke/tokyonight.nvim',
@@ -129,9 +137,4 @@ require('lazy').setup({
     },
 
     { 'akinsho/toggleterm.nvim', version = '*', config = true },
-
-    {
-        'goolord/alpha-nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-    },
 })
