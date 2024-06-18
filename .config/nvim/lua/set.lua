@@ -26,6 +26,8 @@ local options = {
 
     spell = false,
     spelllang = "en_us",
+
+    mouse = "",
 }
 
 for option, value in pairs(options) do
